@@ -20,6 +20,14 @@ const discountSenior = 40;
 createTicket.addEventListener('click', function(event) {
   event.preventDefault();
 
+  if((username.value == '') || (username.value == 'undefined')) {
+    alert('Inserire nome e cognome');
+    ticket.classList.add('d-none');
+  } else if ((kmTravel.value == '') || (kmTravel.value == 'undefined')) {
+    alert('Inserire i chilometri da percorrere');
+    ticket.classList.add('d-none');
+  } else {
+
     let ticketPrice = kmTravel.value * priceKm;
 
     if (ageUser.value < adultAge) {
@@ -49,7 +57,9 @@ createTicket.addEventListener('click', function(event) {
     cpCode.innerHTML = Math.floor(Math.random() * 99999) + 10000;
 
     ticket.classList.remove('d-none');
+  }
 })
+
 
 deleteTicket.addEventListener('click', function() {
   ticket.classList.add('d-none');

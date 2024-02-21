@@ -15,22 +15,22 @@
 <body>
 
   <div class="container as_shadow rounded-5 bg-primary text-center p-5 my-5 fs-3">
-    <h1 class="text-uppercase border-bottom pb-3 fw-bold">Calcola il prezzo del tuo biglietto</h1>
+    <h1 class="text-uppercase border-bottom pb-3">Calcola il prezzo del tuo biglietto</h1>
     <form action="">
       <div class="row py-5">
 
         <div class="col-4">
-          <h3>Nome e Cognome</h3>
+          <h3 class="pb-2 fw-bold fw-bold">Nome e Cognome</h3>
           <input class="as_username w-100" type="text" placeholder="Inserisci nome e cognome">
         </div>
 
         <div class="col-4">
-          <h3>Chilometri da Percorrere</h3>
+          <h3 class="pb-2 fw-bold">Chilometri da Percorrere</h3>
           <input class="as_km w-100" type="number" placeholder="Inserisci i chilometri">
         </div>
         
         <div class="col-4">
-          <h3>Fascia d'età</h3>
+          <h3 class="pb-2 fw-bold">Fascia d'età</h3>
           <select class="as_user-age w-100">
             <option value="17">Minorenne</option>
             <option value="30">Maggiorenne</option>
@@ -39,11 +39,11 @@
         </div>
         
         <div class="col-3 offset-3 pt-5">
-          <button class="btn btn-dark as_create-ticket fs-3">Genera</button>
+          <button class="btn btn-dark as_create-ticket fs-3 fw-bold">Genera</button>
         </div>
         
         <div class="col-3 pt-5">
-          <button class="btn btn-danger as_delete-ticket fs-3" type="reset">Annulla</button>
+          <button class="btn btn-warning as_delete-ticket fs-3 fw-bold" type="reset">Annulla</button>
         </div>
         
       </div>
