@@ -1,15 +1,20 @@
 body {
   height: 100vh;
   padding-top: 100px;
-  background-color: darkblue;
+  /* background-color: darkblue; */
+  background: linear-gradient(to right, black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black,brown,black);
 }
 
 .as_user-age {
-  height: 45px;
+  height: 46px;
 }
 
 .as_shadow {
   box-shadow: 10px 5px 15px black;
+}
+
+.as_bg-dark-blue {
+  background-color: darkblue;
 }
 
 .as_ticket {
@@ -22,7 +27,7 @@ body {
 }
 
 .as_ticket .col:not(:first-child) {
-  background-color: antiquewhite;
+  background-color:  antiquewhite;
 }
 
 .as_bg-bronze {

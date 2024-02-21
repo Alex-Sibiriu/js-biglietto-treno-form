@@ -52,9 +52,9 @@ createTicket.addEventListener('click', function(event) {
     }
 
     namePassenger.innerHTML = username.value;
-    finalPrice.innerHTML = ticketPrice.toFixed(2);
+    finalPrice.innerHTML = ticketPrice.toFixed(2) + ' €';
     wagon.innerHTML = Math.floor(Math.random() * 10) + 1;
-    cpCode.innerHTML = Math.floor(Math.random() * 99999) + 10000;
+    cpCode.innerHTML = Math.floor(Math.random() * 89999) + 10000;
 
     ticket.classList.remove('d-none');
   }
