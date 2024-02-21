@@ -1,18 +1,20 @@
-const username = document.querySelector('.username');
-const kmTravel = document.querySelector('.km');
-const ageUser = document.querySelector('.user-age');
+const username = document.querySelector('.as_username');
+const kmTravel = document.querySelector('.as_km');
+const ageUser = document.querySelector('.as_user-age');
+const createTicket = document.querySelector('.as_create-ticket');
+const deleteTicket = document.querySelector('.as_delete-ticket');
+const ticket = document.querySelector('.as_ticket');
+
+const namePassenger = document.querySelector('.as_name');
+const ticketType = document.querySelector('.as_ticket-type');
+const wagon = document.querySelector('.as_wagon');
+const cpCode = document.querySelector('.as_cp-code');
+const finalPrice = document.querySelector('.as_final-price');
+
 const priceKm = 0.21;
-// let ticketPrice = +kmTravel.value * priceKm;
 const adultAge = 18;
 const discountYoung = 20;
 const discountSenior = 40;
-let message;
-
-console.log(kmTravel.value);
-console.log(priceKm);
-// console.log(ticketPrice);
-
-const createTicket = document.querySelector('.create-ticket');
 
 createTicket.addEventListener('click', function(event) {
   event.preventDefault();
@@ -21,37 +23,27 @@ createTicket.addEventListener('click', function(event) {
 
   if (ageUser.value < adultAge) {
     ticketPrice -= (ticketPrice / 100 * discountYoung);
-    message = 
-    `
-    Visto che hai ${ageUser.value} anni<br>
-    hai diritto al 20% di sconto!<br>
-    Il prezzo del tuo biglietto è di:<br>
-    <strong>${ticketPrice.toFixed(2)} €</strong>
-    ` 
+    ticketType.innerHTML = 'Biglietto Ridotto';
+    console.log(ticketPrice);
+
   } else if (ageUser.value >= 65) {
     ticketPrice -= (ticketPrice / 100 * discountSenior);
-    message = 
-    `
-    Visto che hai ${ageUser.value} anni<br>
-    hai diritto al 40% di sconto!<br>
-    il prezzo del tuo biglietto è di:<br>
-    <strong>${ticketPrice.toFixed(2)} €</strong>
-    ` 
+    ticketType.innerHTML = 'Biglietto Senior';
+    console.log(ticketPrice);
+
   } else {
-    message = 
-    `
-    Visto che hai ${ageUser.value} anni <br>
-    il prezzo del tuo biglietto è di:<br>
-    <strong>${ticketPrice.toFixed(2)} €</strong>
-    ` 
+    ticketType.innerHTML = 'Biglietto Standard';
+    console.log(ticketPrice);
   }
 
-  console.log(priceKm);
+  namePassenger.innerHTML = username.value;
+  finalPrice.innerHTML = ticketPrice.toFixed(2);
+  wagon.innerHTML = Math.floor(Math.random() * 10) + 1;
+  cpCode.innerHTML = Math.floor(Math.random() * 99999) + 10000;
 
-  console.log(ticketPrice)
-
-  console.log(kmTravel.value);
-
-  console.log(message);
+  ticket.classList.remove('d-none');
 })
 
+deleteTicket.addEventListener('click', function() {
+  ticket.classList.add('d-none');
+})
