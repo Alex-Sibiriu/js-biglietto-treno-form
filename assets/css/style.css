@@ -1,0 +1,38 @@
+body {
+  height: 100vh;
+  padding-top: 100px;
+  background-color: darkblue;
+}
+
+.as_user-age {
+  height: 45px;
+}
+
+.as_shadow {
+  box-shadow: 10px 5px 15px black;
+}
+
+.as_ticket {
+  height: 400px;
+  background-color: brown;
+}
+
+.as_ticket .col p:first-child {
+  text-shadow: 0px 0px 4px black;
+}
+
+.as_ticket .col:not(:first-child) {
+  background-color: antiquewhite;
+}
+
+.as_bg-bronze {
+  background: linear-gradient(to bottom right, #cd7f32, #aa6a2a, #cd7f32 );
+}
+
+.as_bg-silver {
+  background: linear-gradient(to bottom right, silver, gray, silver );
+}
+
+.as_bg-gold {
+  background: linear-gradient(to bottom right, gold, goldenrod, gold );
+}
